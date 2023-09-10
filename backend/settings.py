@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
+    'rest_framework',
     'todo',
 ]
 
@@ -103,6 +105,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# White-listing port 3000 for React Front-end.
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000'
+)
 
 
 # Internationalization
